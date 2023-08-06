@@ -4,6 +4,11 @@
 
 鸿蒙测试 Hello World
 
+## 技术架构
+
+![img.png](img.png)
+
+
 ## APP 包结构
 
 Stage 模型和 FA 模型开发的应用，应用程序包结构并不相同
