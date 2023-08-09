@@ -1,9 +1,11 @@
 // Second.ets
 import router from '@ohos.router'
+
 @Entry
 @Component
 struct Second {
   @State message: string = 'Hi there'
+  @State src: string = router.getParams()?.['src']
 
   build() {
     Row() {
@@ -11,6 +13,7 @@ struct Second {
         Text(this.message)
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
+        Text(this.src)
         Button() {
           Text('返回')
             .fontSize(25)
