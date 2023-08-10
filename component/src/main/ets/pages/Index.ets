@@ -82,7 +82,7 @@ struct Index {
         Button() {
           Text('登录示例').fontSize(22)
             .onClick(() => {
-              router.pushUrl({ url: 'pages/LoginPage' })
+              router.pushUrl({ url: 'pages/columnandrow/LoginPage' })
             })
         }
         .type(ButtonType.Capsule)

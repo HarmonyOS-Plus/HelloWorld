@@ -66,7 +66,7 @@ export struct LoginPage {
   build() {
     Column() {
       //logo
-      Image($r('app.media.icon'))
+      Image($r('app.media.logo'))
         .width($r('app.float.logo_image_size'))
         .height($r('app.float.logo_image_size'))
         .margin({ top: $r('app.float.logo_margin_top'), bottom: $r('app.float.logo_margin_bottom') })
@@ -148,11 +148,10 @@ export struct LoginPage {
         .margin({ top: $r('app.float.other_login_margin_top'), bottom: $r('app.float.other_login_margin_bottom') })
 
       Row({ space: CommonConstants.LOGIN_METHODS_SPACE }) {
-        this.imageButton($r('app.string.other_login_qq'))
-        this.imageButton($r('app.string.other_login_WeChat'))
-        this.imageButton($r('app.string.other_login_weibo'))
+        this.imageButton($r('app.media.login_method1'))
+        this.imageButton($r('app.media.login_method2'))
+        this.imageButton($r('app.media.login_method3'))
       }
-      .width('100%')
     }
     .backgroundColor($r('app.color.background'))
     .height(CommonConstants.FULL_PARENT)
