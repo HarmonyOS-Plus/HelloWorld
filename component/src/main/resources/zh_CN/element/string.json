@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "login_text",
+      "value": "登录"
+    },
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "ComponentAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "ComponentAbility_label",
+      "value": "label"
+    }
+  ]
+}

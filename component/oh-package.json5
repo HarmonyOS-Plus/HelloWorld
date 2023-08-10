@@ -1,0 +1,10 @@
+{
+  "name": "component",
+  "version": "1.0.0",
+  "description": "组件（基础组件【Text、Image、TextInput、Button、LoadingProgress等】、容器组件、媒体组件、绘制组件、画布组件）的使用",
+  "main": "",
+  "author": "jinfang",
+  "license": "",
+  "dependencies": {}
+}
+

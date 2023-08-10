@@ -1,9 +1,9 @@
 {
   "name": "entry",
   "version": "1.0.0",
-  "description": "Please describe the basic information.",
+  "description": "学习Helloworld，ArkTS语言，UIAbility的使用。",
   "main": "",
-  "author": "",
+  "author": "jinfang",
   "license": "",
   "dependencies": {}
 }

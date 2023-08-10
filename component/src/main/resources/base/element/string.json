@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "login_text",
+      "value": "login"
+    },
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "ComponentAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "ComponentAbility_label",
+      "value": "label"
+    }
+  ]
+}

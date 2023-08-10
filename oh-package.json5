@@ -1,9 +1,9 @@
 {
   "name": "helloworld",
   "version": "1.0.0",
-  "description": "Please describe the basic information.",
+  "description": "学习鸿蒙系统之第一课到入门知识",
   "main": "",
-  "author": "",
+  "author": "jinfang",
   "license": "",
   "dependencies": {
   },

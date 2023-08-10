@@ -22,6 +22,18 @@
           ]
         }
       ]
+    },
+    {
+      "name": "component",
+      "srcPath": "./component",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
     }
   ]
 }

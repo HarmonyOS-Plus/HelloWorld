@@ -1,0 +1,10 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Texts",
+    "pages/Images",
+    "pages/TextInputs",
+    "pages/Buttons",
+    "pages/MyLoadingProgres"
+  ]
+}
