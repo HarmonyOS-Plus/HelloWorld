@@ -1,8 +1,56 @@
 {
   "string": [
     {
-      "name": "login_text",
+      "name": "login",
       "value": "login"
+    },
+    {
+      "name": "login_page",
+      "value": "Login Page"
+    },
+    {
+      "name": "login_more",
+      "value": "Log in to your account to use more services"
+    },
+    {
+      "name": "input_empty_tips",
+      "value": "The input cannot be empty."
+    },
+    {
+      "name": "account",
+      "value": "account"
+    },
+    {
+      "name": "password",
+      "value": "password"
+    },
+    {
+      "name": "login_sms_code",
+      "value": "SMS verification code login"
+    },
+    {
+      "name": "login_forgot_password",
+      "value": "Forgot Password"
+    },
+    {
+      "name": "register_account",
+      "value": "Register an Account"
+    },
+    {
+      "name": "other_login_desc",
+      "value": "Other Login Methods"
+    },
+    {
+      "name": "other_login_qq",
+      "value": "QQ"
+    },
+    {
+      "name": "other_login_WeChat",
+      "value": "WeChat"
+    },
+    {
+      "name": "other_login_weibo",
+      "value": "MicroBlog"
     },
     {
       "name": "module_desc",

@@ -5,6 +5,8 @@
     "pages/Images",
     "pages/TextInputs",
     "pages/Buttons",
-    "pages/MyLoadingProgres"
+    "pages/MyLoadingProgres",
+    "pages/columnandrow/LoginPage",
+    "pages/columnandrow/MainPage"
   ]
 }

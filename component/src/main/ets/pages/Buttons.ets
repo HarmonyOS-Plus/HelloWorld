@@ -36,7 +36,7 @@ struct Buttons {
         /**
          * 使用资源引用类型，优化一些硬编码
          */
-        Button($r('app.string.login_text'), { type: ButtonType.Capsule })
+        Button($r('app.string.login'), { type: ButtonType.Capsule })
           .width($r('app.float.button_width'))
           .height($r('app.float.button_height'))
           .fontSize($r('app.float.login_fontSize'))

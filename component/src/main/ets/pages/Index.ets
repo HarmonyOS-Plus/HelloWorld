@@ -4,7 +4,9 @@ import router from '@ohos.router'
 @Component
 struct Index {
   build() {
+    // Row 行，表示沿水平方向布局的容器。
     Row() {
+      // Column 列，表示沿垂直方向布局的容器。
       Column() {
         Text('使用Text、Image、TextInput、Button、LoadingProgress 组件').fontSize(26).fontWeight(FontWeight.Bold)
         Button() {
@@ -67,6 +69,20 @@ struct Index {
           Text('LoadingProgres 组件').fontSize(22)
             .onClick(() => {
               router.pushUrl({ url: 'pages/MyLoadingProgres' })
+            })
+        }
+        .type(ButtonType.Capsule)
+        .margin({
+          top: 5
+        })
+        .backgroundColor('#ff39ec11')
+        .width('45%')
+        .height('5%');
+
+        Button() {
+          Text('登录示例').fontSize(22)
+            .onClick(() => {
+              router.pushUrl({ url: 'pages/LoginPage' })
             })
         }
         .type(ButtonType.Capsule)
