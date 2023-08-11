@@ -6,7 +6,6 @@
     "pages/TextInputs",
     "pages/Buttons",
     "pages/MyLoadingProgres",
-    "pages/columnandrow/LoginPage",
-    "pages/columnandrow/MainPage"
+    "pages/assemblyandlayout/LoginPage"
   ]
 }

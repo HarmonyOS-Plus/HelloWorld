@@ -13,6 +13,10 @@
       "value": "Log in to your account to use more services"
     },
     {
+      "name": "input_empty_tips",
+      "value": "The input cannot be empty."
+    },
+    {
       "name": "account",
       "value": "account"
     },

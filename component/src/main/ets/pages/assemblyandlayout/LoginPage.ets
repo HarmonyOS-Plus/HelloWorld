@@ -1,5 +1,4 @@
 import prompt from '@ohos.promptAction';
-import router from '@ohos.router';
 import CommonConstants from '../../common/constants/CommonConstants';
 
 @Extend(TextInput) function inputStyle() {
@@ -52,7 +51,8 @@ export struct LoginPage {
         this.timeOutId = setTimeout(() => {
           this.isShowProgress = false;
           this.timeOutId = null;
-          router.replaceUrl({ url: 'pages/columnandrow/MainPage' });
+          // 登录成功，跳转到主页面
+          // router.replaceUrl({ url: 'pages/assemblyandlayout/MainPage' });
         }, CommonConstants.LOGIN_DELAY_TIME);
       }
     }
@@ -121,7 +121,8 @@ export struct LoginPage {
         .backgroundColor($r('app.color.login_button_color'))
         .margin({ top: $r('app.float.login_button_margin_top'), bottom: $r('app.float.login_button_margin_bottom') })
         .onClick(() => {
-          this.login();
+          // 登录方法
+          this.login()
         })
 
       //注册账号
