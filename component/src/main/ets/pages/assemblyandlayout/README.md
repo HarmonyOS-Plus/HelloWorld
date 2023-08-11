@@ -75,6 +75,149 @@ Column和Row容器的接口都有一个可选参数space，表示子组件在主
 
 ## 构建列表页面布局
 
+常见的列表有线性列表（List列表）和网格布局（Grid列表）：
+
+![](./README.assets/list-Grid.png)
+
+### List组件的使用
+
+#### List组件简介
+
+List是很常用的滚动类容器组件，一般和子组件`ListItem`一起使用，`List`列表中的每一个列表项对应一个`ListItem`组件。
+
+![](./README.assets/list.png)
+
+#### 使用ForEach渲染列表
+
+```tsx
+@Entry
+@Component
+struct ListDemo {
+  private arr: number[] = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  build() {
+    Column() {
+      List({ space: 10 }) {
+        ForEach(this.arr, (item: number) => {
+          ListItem() {
+            Text(`${item}`)
+              .width('100%')
+              .height(100)
+              .fontSize(20)
+              .fontColor(Color.White)
+              .textAlign(TextAlign.Center)
+              .borderRadius(10)
+              .backgroundColor(0x007DFF)
+          }
+        }, item => item)
+      }
+    }
+    .padding(12)
+    .height('100%')
+    .backgroundColor(0xF1F3F5)
+  }
+}
+```
+
+![](./README.assets/list-listItem.png)
+
+#### 设置列表项分割线
+
+List组件子组件ListItem之间默认是没有分割线的，部分场景子组件ListItem间需要设置分割线，
+这时候您可以使用List组件的`divider`属性。divider属性包含四个参数：
+
+- **strokeWidth**: 分割线的线宽。
+- **color**: 分割线的颜色。
+- **startMargin**：分割线距离列表侧边起始端的距离。
+- **endMargin**: 分割线距离列表侧边结束端的距离。
+
+```tsx
+List(){ ... }.divider({ strokeWidth: '4', color: Color.Red, startMargin: '8', endMargin: '8' })
+```
+
+![](./README.assets/list-divider.png)
+
+#### List列表滚动事件监听
+
+List组件提供了一系列事件方法用来监听列表的滚动，您可以根据需要，监听这些事件来做一些操作：
+
+- onScroll：列表滑动时触发，返回值scrollOffset为滑动偏移量，scrollState为当前滑动状态。
+- onScrollIndex：列表滑动时触发，返回值分别为滑动起始位置索引值与滑动结束位置索引值。
+- onReachStart：列表到达起始位置时触发。
+- onReachEnd：列表到底末尾位置时触发。
+- onScrollStop：列表滑动停止时触发。
+
+```tsx
+List({ space: 10 }) {
+  ForEach(this.arr, (item) => {
+    ListItem() {
+      Text(`${item}`)
+        ...
+    }.editable(true)
+  }, item => item)
+}
+.editMode(this.editFlag)
+// 列表滑动时触发，返回值分别为 滑动起始位置索引值 与 滑动结束位置索引值。
+.onScrollIndex((firstIndex: number, lastIndex: number) => {
+    console.info('first：' + firstIndex + '，last：' + lastIndex)
+})
+// 列表滑动时触发，返回值scrollOffset为滑动偏移量，scrollState为当前滑动状态。
+.onScroll((scrollOffset: number, scrollState: ScrollState) => {
+    console.info('scrollOffset：' + scrollOffset + '，scrollState：' + scrollState)
+})
+// 滑动到顶部时
+.onReachStart(() => {
+    console.info('onReachStart')
+})
+// 滑动到底部时
+.onReachEnd(() => {
+    console.info('onReachEnd')
+})
+// 停止滑动时
+.onScrollStop(() => {
+    console.info('onScrollStop')
+})
+```
+
+#### 设置List排列方向listDirection
+
+List组件里面的列表项默认是按垂直方向排列的.
+
+`listDirection` 属性设置为`Axis.`。
+
+```tsx
+List(){ ... }.listDirection(Axis.Vertical)
+```
+
+![](./README.assets/list-listDirection-Vertical.png)
+
+ `listDirection` 属性设置为`Axis.Horizontal`。
+
+```tsx
+List(){ ... }.listDirection(Axis.Horizontal)
+```
+
+![](./README.assets/list-listDirection-Horizontal.png)
+
+
+#### 
+
+
+
+
+#### 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

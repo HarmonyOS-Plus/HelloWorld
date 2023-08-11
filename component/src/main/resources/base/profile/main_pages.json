@@ -6,6 +6,8 @@
     "pages/TextInputs",
     "pages/Buttons",
     "pages/MyLoadingProgres",
-    "pages/assemblyandlayout/LoginPage"
+    "pages/assemblyandlayout/LoginPage",
+    "pages/assemblyandlayout/ListDemo",
+    "pages/assemblyandlayout/GridDemo"
   ]
 }
