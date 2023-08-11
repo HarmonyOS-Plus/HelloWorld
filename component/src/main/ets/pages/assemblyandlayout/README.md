@@ -199,13 +199,104 @@ List(){ ... }.listDirection(Axis.Horizontal)
 
 ![](./README.assets/list-listDirection-Horizontal.png)
 
+### Grid组件的使用
 
-#### 
+#### Grid组件简介
 
+Grid组件为网格容器，是一种网格列表，由“行”和“列”分割的单元格所组成，通过指定“项目”所在的单元格做出各种各样的布局。Grid组件一般和子组件GridItem一起使用，Grid列表中的每一个条目对应一个GridItem组件。
 
+![](./README.assets/grid.jpg)
 
+#### 使用ForEach渲染网格布局
 
-#### 
+和List组件一样，Grid组件也可以使用ForEach来渲染多个列表项GridItem，我们通过下面的这段示例代码来介绍Grid组件的使用。
+
+```tsx
+@Entry
+@Component
+struct GridExample {
+  private arr: String[] = ['0', '1', '2', '3']
+
+  build() {
+    Column() {
+      Grid() {
+        ForEach(this.arr, (day: string) => {
+          ForEach(this.arr, (day: string) => {
+            GridItem() {
+              Text(day)
+                .fontSize(16)
+                .fontColor(Color.White)
+                .backgroundColor(0x007DFF)
+                .width('100%')
+                .height('100%')
+                .textAlign(TextAlign.Center)
+            }
+          }, day => day)
+        }, day => day)
+      }
+      .columnsTemplate('1fr 1fr 1fr 1fr')
+      .rowsTemplate('1fr 1fr 1fr 1fr')
+      .columnsGap(10)
+      .rowsGap(10)
+      .height(300)
+    }
+    .width('100%')
+    .padding(12)
+    .backgroundColor(0xF1F3F5)
+  }
+}
+```
+
+示例代码中使用了两层ForEach遍历长度为4的数组arr，创建了16个GridItem列表项。
+
+- columnsTemplate：`1fr 1fr 1fr 1fr`，表示这个网格为4列，将Grid允许的宽分为4等分，每列占1份；
+- rowsTemplate：`1fr 1fr 1fr 1fr`，表示这个网格为4行，将Grid允许的高分为4等分，每行占1份。
+- columnsGap：列间距为10vp。
+- rowsTemplate：行间距为10vp。
+
+示例代码效果图如下：
+
+![](./README.assets/grid-2.jpg)
+
+上面构建的网格布局使用了固定的行数和列数，所以构建出的网格是不可滚动的。
+然而有时候因为内容较多，我们通过滚动的方式来显示更多的内容，就需要一个可以滚动的网格布局。
+我们只需要设置 rowsTemplate 和 columnsTemplate 中的一个即可。
+
+将示例代码中 `GridItem` 的高度设置为固定值，例如100；仅设置 columnsTemplate 属性，不设置rowsTemplate属性，就可以实现Grid列表的滚动：
+
+```tsx
+Grid() {
+  ForEach(this.arr, (day: string) => {
+    ForEach(this.arr, (day: string) => {
+      GridItem() {
+        Text(day)
+          .height(100)
+          ...
+      }
+    }, day => day)
+  }, day => day)
+}
+.columnsTemplate('1fr 1fr 1fr 1fr')
+.columnsGap(10)
+.rowsGap(10)
+.height(300)
+```
+
+此外，Grid像List一样也可以使用onScrollIndex来监听列表的滚动。
+
+#### 列表性能优化
+
+开发者在使用长列表时，如果直接采用循环渲染方式，会一次性加载所有的列表元素，从而导致页面启动时间过长，影响用户体验，推荐通过以下方式来进行列表性能优化：
+
+[使用数据懒加载](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/ui-ts-performance-improvement-recommendation-0000001477981001-V3#ZH-CN_TOPIC_0000001477981001__推荐使用数据懒加载)
+
+[设置list组件的宽高](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/ui-ts-performance-improvement-recommendation-0000001477981001-V3#ZH-CN_TOPIC_0000001477981001__设置list组件的宽高)
+
+#### 参考链接
+
+1. List组件的相关API参考：[List组件](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-container-list-0000001477981213-V3?catalogVersion=V3)。
+2. Grid组件的相关API参考：[Grid组件](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-container-grid-0000001478341161-V3?catalogVersion=V3)。
+3. 循环渲染（ForEach）：[循环渲染](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-rendering-control-0000001427744548-V3?catalogVersion=V3#ZH-CN_TOPIC_0000001427744548__循环渲染)。
 
 
 
