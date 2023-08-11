@@ -244,3 +244,9 @@ JS工程只支持FA模型，Hvigor工程支持API Version 8~9，其工程目录�
 > - - 其他依赖可直接复制到oh-package.json5的dependencies字段中。
 > - 除表格中呈现的字段外，package.json中其余字段暂不支持迁移。如您在历史工程中使用到其余字段，请反馈您所使用的字段（选中文本，点击“意见反馈”）。
 
+
+### 容器组件与布局
+
+[容器组件与布局](./component/src/main/ets/pages/assemblyandlayout/README.md)
+
+
