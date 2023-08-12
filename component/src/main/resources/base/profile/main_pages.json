@@ -8,6 +8,7 @@
     "pages/MyLoadingProgres",
     "pages/assemblyandlayout/LoginPage",
     "pages/assemblyandlayout/ListDemo",
-    "pages/assemblyandlayout/GridDemo"
+    "pages/assemblyandlayout/GridDemo",
+    "pages/assemblyandlayout/TabsExample"
   ]
 }

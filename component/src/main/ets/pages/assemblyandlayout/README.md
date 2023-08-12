@@ -3,6 +3,7 @@
 ## 相关概念
 
 基础组件：
+
 - Text：显示一段文本的组件。
 - Image：图片组件，支持本地图片和网络图片的渲染展示。
 - TextInput：可以输入单行文本并支持响应输入事件的组件。
@@ -10,6 +11,7 @@
 - LoadingProgress：用于显示加载动效的组件。
 
 容器组件：
+
 - Flex：应用弹性方式布局子组件的容器组件。
 - Column：沿垂直方向布局的容器。
 - Row：沿水平方向布局容器。
@@ -36,12 +38,18 @@
 
 子组件在主轴方向上的对齐使用justifyContent属性来设置，其参数类型是FlexAlign。`FlexAlign` 定义了以下几种类型：
 
-- - **Start**：元素在主轴方向首端对齐，第一个元素与行首对齐，同时后续的元素与前一个对齐（简单理解：首部对齐）。
-- - **Center**：元素在主轴方向中心对齐（简单理解：居中对齐）。
-- - **End**：元素在主轴方向尾部对齐（简单理解：尾部对齐）。
-- - **SpaceBetween**：元素在主轴方向均匀分配弹性元素，相邻元素之间距离相同。 第一个元素与行首对齐，最后一个元素与行尾对齐。
-- - **SpaceAround**：元素在主轴方向均匀分配弹性元素，相邻元素之间距离相同。 第一个元素到行首的距离和最后一个元素到行尾的距离是相邻元素之间距离的一半。
-- - **SpaceEvenly**：元素在主轴方向等间距布局，无论是相邻元素还是边界元素到容器的间距都一样。
+-
+    - **Start**：元素在主轴方向首端对齐，第一个元素与行首对齐，同时后续的元素与前一个对齐（简单理解：首部对齐）。
+-
+    - **Center**：元素在主轴方向中心对齐（简单理解：居中对齐）。
+-
+    - **End**：元素在主轴方向尾部对齐（简单理解：尾部对齐）。
+-
+    - **SpaceBetween**：元素在主轴方向均匀分配弹性元素，相邻元素之间距离相同。 第一个元素与行首对齐，最后一个元素与行尾对齐。
+-
+    - **SpaceAround**：元素在主轴方向均匀分配弹性元素，相邻元素之间距离相同。 第一个元素到行首的距离和最后一个元素到行尾的距离是相邻元素之间距离的一半。
+-
+    - **SpaceEvenly**：元素在主轴方向等间距布局，无论是相邻元素还是边界元素到容器的间距都一样。
 
 ----------------------------
 
@@ -49,17 +57,23 @@
 
 -Column容器的主轴是垂直方向，交叉轴是水平方向，其参数类型为HorizontalAlign（水平对齐），`HorizontalAlign` 定义了以下几种类型：
 
-- - **Start**：设置子组件在水平方向上按照起始端对齐。
-- - **Center**（默认值）：设置子组件在水平方向上居中对齐。
-- - **End**：设置子组件在水平方向上按照末端对齐。
+-
+    - **Start**：设置子组件在水平方向上按照起始端对齐。
+-
+    - **Center**（默认值）：设置子组件在水平方向上居中对齐。
+-
+    - **End**：设置子组件在水平方向上按照末端对齐。
 
 ----------------------------
 
 -Row容器的主轴是水平方向，交叉轴是垂直方向，其参数类型为VerticalAlign（垂直对齐），`VerticalAlign` 定义了以下几种类型：
 
-- - **Top**：设置子组件在垂直方向上居顶部对齐。
-- - **Center**（默认值）：设置子组件在竖直方向上居中对齐。
-- - **Bottom**：设置子组件在竖直方向上居底部对齐。
+-
+    - **Top**：设置子组件在垂直方向上居顶部对齐。
+-
+    - **Center**（默认值）：设置子组件在竖直方向上居中对齐。
+-
+    - **Bottom**：设置子组件在竖直方向上居底部对齐。
 
 ----------------------------------------------------
 
@@ -71,7 +85,6 @@
 - Row(value?:{space?: string | number})
 
 Column和Row容器的接口都有一个可选参数space，表示子组件在主轴方向上的间距。
-
 
 ## 构建列表页面布局
 
@@ -191,7 +204,7 @@ List(){ ... }.listDirection(Axis.Vertical)
 
 ![](./README.assets/list-listDirection-Vertical.png)
 
- `listDirection` 属性设置为`Axis.Horizontal`。
+`listDirection` 属性设置为`Axis.Horizontal`。
 
 ```tsx
 List(){ ... }.listDirection(Axis.Horizontal)
@@ -294,33 +307,231 @@ Grid() {
 
 #### 参考链接
 
-1. List组件的相关API参考：[List组件](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-container-list-0000001477981213-V3?catalogVersion=V3)。
-2. Grid组件的相关API参考：[Grid组件](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-container-grid-0000001478341161-V3?catalogVersion=V3)。
-3. 循环渲染（ForEach）：[循环渲染](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-rendering-control-0000001427744548-V3?catalogVersion=V3#ZH-CN_TOPIC_0000001427744548__循环渲染)。
+1.
+List组件的相关API参考：[List组件](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-container-list-0000001477981213-V3?catalogVersion=V3)。
+2.
+Grid组件的相关API参考：[Grid组件](https://developer.harmonyos.com/cn/docs/documentation/doc-references-V3/ts-container-grid-0000001478341161-V3?catalogVersion=V3)。
+3.
+循环渲染（ForEach）：[循环渲染](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/arkts-rendering-control-0000001427744548-V3?catalogVersion=V3#ZH-CN_TOPIC_0000001427744548__循环渲染)。
+
+### Tabs 组件
+
+ArkUI开发框架提供了一种页签容器组件Tabs，开发者通过Tabs组件可以很容易的实现内容视图的切换。
+
+![](./README.assets/tabs.png)
+
+#### Tabs组件的简单使用
+
+Tabs组件仅可包含子组件TabContent，每一个页签对应一个内容视图即TabContent组件。
+
+```tsx
+@Entry
+@Component
+struct TabsExample {
+  private controller: TabsController = new TabsController()
+
+  build() {
+    Column() {
+      Tabs({ barPosition: BarPosition.Start, controller: this.controller }) {
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor(Color.Green)
+        }
+        .tabBar('green')
+        ...
+      }
+      .barWidth('100%') // 设置TabBar宽度
+      .barHeight(60) // 设置TabBar高度
+      .width('100%') // 设置Tabs组件宽度
+      .height('100%') // 设置Tabs组件高度
+      .backgroundColor(0xF5F5F5) // 设置Tabs组件背景颜色
+    }
+    ...
+  }
+}
+```
+
+效果如下：
+
+![](./README.assets/tabs-2.png)
+
+Tabs组件中包含4个子组件TabContent，通过TabContent的 `tabBar` 属性设置 `TabBar` 的显示内容。
+
+使用通用属性 `width`和`height` 设置了Tabs组件的宽高，
+
+使用 `barWidth`和`barHeight` 设置了TabBar的宽度和高度。
+
+<img src="./README.assets/img.png" style="zoom: 67%;" />
+
+说明
+
+- TabContent 组件不支持设置通用 *宽度* 属性，其宽度默认撑满Tabs父组件。
+- TabContent 组件不支持设置通用 *高度* 属性，其高度由Tabs *父组件高度* 与TabBar组件 *高度* 决定。
 
 
 
+#### 设置TabBar布局模式
+
+因为Tabs的布局模式默认是Fixed的，所以Tabs的页签是不可滑动的。当页签比较多的时候，可能会导致页签显示不全，
+将布局模式设置为Scrollable的话，可以实现页签的滚动。
+
+Tabs的布局模式有 `Fixed`（默认）和 `Scrollable` 两种：
+
+- BarMode.Fixed：所有TabBar平均分配barWidth宽度（纵向时平均分配barHeight高度）,页签不可滚动，效果图如下：
+
+  ![](./README.assets/tabs-Fixed.png)
+
+- BarMode.Scrollable：每一个TabBar均使用实际布局宽度，超过总长度（横向Tabs的barWidth，纵向Tabs的barHeight）后可滑动。
+
+  ![](./README.assets/tabs-Scrollable.png)
+
+```tsx
+@Entry
+@Component
+struct TabsExample {
+  private controller: TabsController = new TabsController()
+
+  build() {
+    Column() {
+      Tabs({ barPosition: BarPosition.Start, controller: this.controller }) {
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor(Color.Green)
+        }
+        .tabBar('green')
+        ...
+      }
+      // 设置Tabs的布局模式，Fixed：所有TabBar平均分配barWidth宽度（纵向时平均分配barHeight高度）,页签不可滚动；
+      // Scrollable：每一个TabBar均使用实际布局宽度，超过总长度（横向Tabs的barWidth，纵向Tabs的barHeight）后可滑动。
+      .barMode(BarMode.Scrollable) 
+      ...
+    }
+    ...
+  }
+}
+```
+
+#### 设置TabBar位置和排列方向
+
+使用Tabs组件接口中的参数barPosition设置页签位置.
+
+此外页签显示位置还与vertical属性相关联，vertical属性用于设置页签的排列方向，当vertical的属性值为false（默认值）时页签横向排列，为true时页签纵向排列。
+
+barPosition的值可以设置为 `BarPosition.Start`（默认值）和 `BarPosition.End` ：
+
+- BarPosition.Start（简单理解：可以位于容器顶部【false】和左侧【true】）
+
+- - `vertical` 属性方法设置为 false（默认值）时，页签位于容器顶部。
+
+  ```tsx
+  Tabs({ barPosition: BarPosition.Start }) {
+    ...
+  }
+  .vertical(false)
+  ```
+  
+  ![](./README.assets/tabs-vertical-start-false.png)
+
+- - vertical属性方法设置为true时，页签位于容器左侧。
+
+  ```tsx
+  Tabs({ barPosition: BarPosition.Start }) {
+    ...
+  }
+  .vertical(true)
+  ```
+  
+  ![](./README.assets/tabs-vertical-start-true.png)
+
+- BarPosition.End（简单理解：可以位于容器低部【false】和右侧【true】）
+
+- - vertical属性方法设置为false时，页签位于容器底部。
+
+  ```tsx
+  Tabs({ barPosition: BarPosition.End }) {
+    ...
+  }
+  .vertical(false)
+  ```
+
+  ![](./README.assets/tabs-vertical-end-false.png)
+
+- - vertical属性方法设置为true时，页签位于容器右侧。
+
+  ```tsx
+  Tabs({ barPosition: BarPosition.End }) {
+    ...
+  }
+  .vertical(true)
+  ```
+  
+  ![](./README.assets/tabs-vertical-end-true.png)
 
 
+#### 自定义TabBar样式
 
+往往开发过程中，UX给我们的设计效果可能并不是这样的，比如下面的这种底部页签效果：
 
+![](./README.assets/tabbar-style.png)
 
+TabContent的tabBar属性除了支持 `string` 类型，还支持使用 `@Builder` 装饰器修饰的函数。
+您可以使用@Builder装饰器，构造一个生成自定义TabBar样式的函数，实现上面的底部页签效果，
 
+示例代码如下：
 
+```tsx
+@Entry
+@Component
+struct TabsExample {
+  @State currentIndex: number = 0;
+  private tabsController: TabsController = new TabsController();
 
+  @Builder TabBuilder(title: string, targetIndex: number, selectedImg: Resource, normalImg: Resource) {
+    Column() {
+      Image(this.currentIndex === targetIndex ? selectedImg : normalImg)
+        .size({ width: 25, height: 25 })
+      Text(title)
+        .fontColor(this.currentIndex === targetIndex ? '#1698CE' : '#6B6B6B')
+    }
+    .width('100%')
+    .height(50)
+    .justifyContent(FlexAlign.Center)
+    .onClick(() => {
+      this.currentIndex = targetIndex;
+      this.tabsController.changeIndex(this.currentIndex);
+    })
+  }
 
+  build() {
+    Tabs({ barPosition: BarPosition.End, controller: this.tabsController }) {
+      TabContent() {
+        Column().width('100%').height('100%').backgroundColor('#00CB87')
+      }
+      .tabBar(this.TabBuilder('首页', 0, $r('app.media.home_selected'), $r('app.media.home_normal')))
 
+      TabContent() {
+        Column().width('100%').height('100%').backgroundColor('#007DFF')
+      }
+      .tabBar(this.TabBuilder('我的', 1, $r('app.media.mine_selected'), $r('app.media.mine_normal')))
+    }
+    .barWidth('100%')
+    .barHeight(50)
+    .onChange((index: number) => {
+      this.currentIndex = index;
+    })
+  }
+}
+```
 
+示例代码中将 `barPosition` 的值设置为 `BarPosition.End`，使页签显示在底部。
 
+使用`@Builder`修饰TabBuilder函数，生成由`Image`和`Text`组成的页签。
 
+同时也给Tabs组件设置了`TabsController`控制器，当点击某个页签时，调用`changeIndex`方法进行页签内容切换。
 
+最后还需要给Tabs添加onChange事件，Tab页签切换后触发该事件，这样当我们左右滑动内容视图的时候，页签样式也会跟着改变。
 
+![](./README.assets/tabs-builder-1.png)
 
+-----
 
-
-
-
-
-
-
+![](./README.assets/tabs-builder-2.png)
 

@@ -83,6 +83,14 @@ struct Index {
         }
         .buttonStyle()
 
+        Button() {
+          Text('Tabs 组件').fontSize(22)
+            .onClick(() => {
+              router.pushUrl({ url: 'pages/assemblyandlayout/TabsExample' })
+            })
+        }
+        .buttonStyle()
+
       }
       .width('100%')
     }
