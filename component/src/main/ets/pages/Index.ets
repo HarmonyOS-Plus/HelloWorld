@@ -91,6 +91,14 @@ struct Index {
         }
         .buttonStyle()
 
+        Button() {
+          Text('管理组件状态').fontSize(22)
+            .onClick(() => {
+              router.pushUrl({ url: 'pages/componentmanagement/MainPage' })
+            })
+        }
+        .buttonStyle()
+
       }
       .width('100%')
     }

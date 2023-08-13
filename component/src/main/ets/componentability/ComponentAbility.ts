@@ -15,14 +15,29 @@ export default class ComponentAbility extends UIAbility {
     // Main window is created, set main page for this ability
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
 
-    windowStage.loadContent('pages/Index', (err, data) => {
+    windowStage.loadContent('pages/componentmanagement/MainPage', (err, data) => {
       if (err.code) {
+        hilog.isLoggable(0x0000, 'testTag', hilog.LogLevel.ERROR);
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
         return;
       }
+      hilog.isLoggable(0x0000, 'testTag', hilog.LogLevel.INFO);
       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
     });
   }
+
+  /* onWindowStageCreate(windowStage: window.WindowStage) {
+     // Main window is created, set main page for this ability
+     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
+
+     windowStage.loadContent('pages/Index', (err, data) => {
+       if (err.code) {
+         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');
+         return;
+       }
+       hilog.info(0x0000, 'testTag', 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');
+     });
+   }*/
 
   onWindowStageDestroy() {
     // Main window is destroyed, release UI related resources

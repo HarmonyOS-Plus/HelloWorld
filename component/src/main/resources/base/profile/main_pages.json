@@ -9,6 +9,8 @@
     "pages/assemblyandlayout/LoginPage",
     "pages/assemblyandlayout/ListDemo",
     "pages/assemblyandlayout/GridDemo",
-    "pages/assemblyandlayout/TabsExample"
+    "pages/assemblyandlayout/TabsExample",
+    "pages/componentmanagement/MainPage"
+
   ]
 }
