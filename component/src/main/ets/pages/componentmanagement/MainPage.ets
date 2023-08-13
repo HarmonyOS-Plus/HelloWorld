@@ -25,10 +25,15 @@ import getCurrentTime from '../../common/utils/DateUtil';
 @Entry
 @Component
 struct MainPage {
+  // 子目标数组
   @State targetData: Array<TaskItemBean> = DataModel.getData();
+  // 子目标总数
   @State totalTasksNumber: number = 0;
+  // 已完成子目标数
   @State completedTasksNumber: number = 0;
+  // 最近更新时间
   @State latestUpdateDate: string = CommonConstants.DEFAULT_PROGRESS_VALUE;
+  // 监听数据变化的参数
   @Provide @Watch('onProgressChanged') overAllProgressChanged: boolean = false;
   dialogController: CustomDialogController = new CustomDialogController({
     builder: AddTargetDialog({
@@ -44,7 +49,7 @@ struct MainPage {
   });
 
   /**
-   * Listening targetData.
+   * overAllProgressChanged 改变时的回调
    */
   onProgressChanged() {
     this.totalTasksNumber = this.targetData.length;
@@ -56,12 +61,15 @@ struct MainPage {
 
   build() {
     Column() {
+      // 标题
       this.titleBar()
+      // 目标整体进展详情
       TargetInformation({
         latestUpdateDate: this.latestUpdateDate,
         totalTasksNumber: this.totalTasksNumber,
         completedTasksNumber: this.completedTasksNumber
       })
+      // 子目标列表
       TargetList({
         targetData: $targetData,
         onAddClick: () => this.dialogController.open()

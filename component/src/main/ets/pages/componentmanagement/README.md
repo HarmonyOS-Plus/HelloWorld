@@ -304,6 +304,60 @@ export default struct TargetListItem {
 
 
 
+### 源码目录说明
+
+
+
+```
+├──entry/src/main/ets                   // 代码区
+│  ├──common
+│  │  ├──bean
+│  │  │  └──TaskItemBean.ets            // 任务进展实体类
+│  │  ├──constants
+│  │  │  └──CommonConstants.ets         // 公共常量类
+│  │  └──utils
+│  │     ├──DateUtil.ets                // 获取格式化日期工具
+│  │     └──Logger.ts                   // 日志打印工具类
+│  ├──entryability
+│  │  └──EntryAbility.ts                // 程序入口类
+│  ├──pages
+│  │  └──MainPage.ets                   // 主页面
+│  ├──view
+│  │  ├──TargetInformation.ets          // 整体目标详情自定义组件
+│  │  ├──AddTargetDialog.ets            // 自定义弹窗
+│  │  ├──ProgressEditPanel.ets          // 进展调节自定义组件
+│  │  ├──TargetList.ets                 // 工作目标列表
+│  │  └──TargetListItem.ets             // 工作目标列表子项
+│  └──viewmodel
+│     ├──DataModel.ets                  // 工作目标数据操作类
+│     ├──MainPageModel.ets              // 主页面业务处理文件
+│     ├──TaskListItemModel              // 工作目标列表子项业务处理文件
+│     └──TaskListViewModel.ets          // 工作目标列表业务处理文件
+└──entry/src/main/resources             // 资源文件目录
+```
+
+#### MainPage作为本应用的主界面，从上至下由三个自定义组件组成。
+
+1. 标题titleBar。
+
+2. 目标整体进展详情TargetInformation。
+
+3. 子目标列表TargetList。
+
+   
+
+#### MainPage 主要维护五个参数：
+
+子目标数组targetData、子目标总数totalTasksNumber、已完成子目标数completedTasksNumber、最近更新时间latestUpdateDate、监听数据变化的参数overAllProgressChanged。具体作用有以下三个方面：
+
+1. 子组件TargetInformation接收三个参数totalTasksNumber、completedTasksNumber、latestUpdateDate，渲染整体目标详情。
+2. 子组件TargetList接收参数targetData渲染列表。
+3. 使用@Watch监听overAllProgressChanged的变化。当overAllProgressChanged改变时，回调onProgressChanged方法，刷新整体进展TargetInformation。
+
+
+
+
+
 ## Video视频组件
 
 
